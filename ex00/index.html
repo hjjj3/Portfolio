@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cybersecurity graduate portfolio: SOC, network security and web development">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="progress"></div>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div id="cursor" aria-hidden="true"></div>
+  <button id="toTop" aria-label="Back to top">↑</button>
+
+  <header class="nav">
+    <a href="#home" class="logo">&lt;<span data-first>H</span>/&gt;</a>
+    <nav id="menu" aria-label="Main navigation">
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#skills" data-i18n="nav_skills">Skills</a>
+      <a href="#projects" data-i18n="nav_projects">Projects</a>
+      <a href="#certs" data-i18n="nav_certs">Certificates</a>
+      <a href="#hobbies" data-i18n="nav_hobbies">Hobbies</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="tools">
+      <span class="dots" id="dots" aria-label="Accent colors"></span>
+      <button id="langBtn" class="ibtn" aria-label="Switch language">AR</button>
+      <button id="themeBtn" class="ibtn" aria-label="Switch theme">🌙</button>
+      <button id="burger" class="ibtn burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-text reveal">
+        <p class="tag" data-i18n="hi">Hi, I'm</p>
+        <h1 data-name>Name</h1>
+        <h2><span id="typed"></span><span class="caret">|</span></h2>
+        <p class="muted" data-i18n="hero_p"></p>
+        <div class="cta">
+          <a href="#projects" class="btn" data-i18n="cta1">View Projects</a>
+          <a href="#contact" class="btn ghost" data-i18n="cta2">Contact Me</a>
+        </div>
+        <div class="social">
+          <a href="assets/Hashem_Al-Na_seh_CV.docx" download data-i18n="cv">Download CV</a>
+          <a href="https://github.com/hjjj3" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/hashem-al-na-seh-1524a2361" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="avatar-box reveal">
+        <img id="avatar" src="assets/casual.jpg" alt="Casual photo">
+        <div class="avatar-btns"></div>
+      </div>
+    </section>
+
+    <section id="about" class="reveal">
+      <h2 class="title" data-i18n="nav_about">About</h2>
+      <p class="lead muted" data-i18n="about_p"></p>
+      <div class="facts">
+        <span data-i18n="fact1"></span>
+        <span data-i18n="fact2"></span>
+        <span data-i18n="fact3"></span>
+      </div>
+      <div class="stats">
+        <div><b data-count="6">0</b><span data-i18n="st1">Projects</span></div>
+        <div><b data-count="5">0</b><span data-i18n="st2">Certificates</span></div>
+        <div><b id="gh-repos">—</b><span data-i18n="st3">GitHub Repos</span></div>
+        <div><b id="gh-fol">—</b><span data-i18n="st4">Followers</span></div>
+      </div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <h2 class="title" data-i18n="nav_skills">Skills</h2>
+      <div class="grid" id="skillGrid"></div>
+      <h3 class="sub" data-i18n="j_title">My Journey</h3>
+      <div class="timeline">
+        <div class="tl"><b>Cybersecurity</b><p class="muted" data-i18n="j0"></p></div>
+        <div class="tl"><b>Linux</b><p class="muted" data-i18n="j1"></p></div>
+        <div class="tl"><b>Git</b><p class="muted" data-i18n="j2"></p></div>
+        <div class="tl"><b>HTML + CSS</b><p class="muted" data-i18n="j3"></p></div>
+        <div class="tl"><b>JavaScript</b><p class="muted" data-i18n="j4"></p></div>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <h2 class="title" data-i18n="nav_projects">Projects</h2>
+      <div class="filters" id="filters">
+        <button class="chip active" data-f="All" data-i18n="f_all">All</button>
+        <button class="chip" data-f="Cybersecurity">Cybersecurity</button>
+        <button class="chip" data-f="Shell">Shell</button>
+        <button class="chip" data-f="HTML">HTML</button>
+        <button class="chip" data-f="CSS">CSS</button>
+        <button class="chip" data-f="JavaScript">JavaScript</button>
+      </div>
+      <div class="grid" id="projGrid"></div>
+    </section>
+
+    <section id="certs" class="reveal">
+      <h2 class="title" data-i18n="nav_certs">Certificates</h2>
+      <div class="grid" id="certGrid"></div>
+    </section>
+
+    <section id="hobbies" class="reveal">
+      <h2 class="title" data-i18n="nav_hobbies">Hobbies</h2>
+      <div class="grid">
+        <div class="card">💻 <span data-i18n="h1"></span></div>
+        <div class="card">🛡️ <span data-i18n="h2"></span></div>
+        <div class="card">📚 <span data-i18n="h3"></span></div>
+        <div class="card">⚽ <span data-i18n="h4"></span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <h2 class="title" data-i18n="nav_contact">Contact</h2>
+      <div class="contact-info">
+        <a href="mailto:hasheemalghanem@gmail.com">✉️ hasheemalghanem@gmail.com</a>
+        <a href="tel:+962772185488" dir="ltr">📞 +962 77 218 5488</a>
+        <a href="https://www.linkedin.com/in/hashem-al-na-seh-1524a2361" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
+      </div>
+      <form id="form" novalidate>
+        <input id="name" type="text" autocomplete="name" data-ph="ph_name" aria-label="Your name">
+        <input id="email" type="email" autocomplete="email" data-ph="ph_email" aria-label="Your email">
+        <textarea id="msg" rows="5" data-ph="ph_msg" aria-label="Your message"></textarea>
+        <p id="status" role="status" aria-live="polite"></p>
+        <button class="btn" type="submit" data-i18n="send">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 <span data-name></span> ·
+      <a href="https://github.com/hjjj3" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/hashem-al-na-seh-1524a2361" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </p>
+  </footer>
+
+  <div id="modal" aria-hidden="true">
+    <div class="box" role="dialog" aria-modal="true" aria-labelledby="mT">
+      <button id="mClose" aria-label="Close">✕</button>
+      <img id="mImg" alt="" hidden>
+      <h3 id="mT"></h3>
+      <p id="mD" class="muted"></p>
+      <p id="mR" hidden></p>
+      <div class="tags" id="mTags"></div>
+      <a id="mL" class="btn" target="_blank" rel="noopener noreferrer" hidden></a>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
