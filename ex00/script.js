@@ -49,7 +49,7 @@ const projects = [
     id: "HM",
     tag: "Cybersecurity",
     feat: true,
-    url: "https://hyvermail.com/blog",
+    url: "https://hyvermail.com",
     tech: ["Email Privacy", "Cybersecurity", "Digital Identity"],
     en: [
       "HyverMail: Privacy-Focused Email Security Platform",
