@@ -22,7 +22,7 @@ const certs = [
   },
   {
     tag: "Cisco",
-    img: "assets/cert-cybersecurity.jpg",
+    img: "assets/cert-cybersecurtiy.jpg",
     link: "",
     en: ["Cisco Cybersecurity Essentials", "Core cybersecurity concepts: threats, defense and network security basics."],
     ar: ["Cisco Cybersecurity Essentials", "مفاهيم الأمن السيبراني: التهديدات والدفاع وأساسيات أمن الشبكات."]
