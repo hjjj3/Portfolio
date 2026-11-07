@@ -22,7 +22,7 @@ const certs = [
   },
   {
     tag: "Cisco",
-    img: "assets/cert-cybersecurtiy.jpg",
+    img: "assets/cert-cybersecurity.jpg",
     link: "",
     en: ["Cisco Cybersecurity Essentials", "Core cybersecurity concepts: threats, defense and network security basics."],
     ar: ["Cisco Cybersecurity Essentials", "مفاهيم الأمن السيبراني: التهديدات والدفاع وأساسيات أمن الشبكات."]
@@ -63,6 +63,118 @@ const projects = [
     ]
   },
   {
+    id: "SOC", tag: "Cybersecurity", feat: true, repo: "SOC-Platform",
+    tech: ["SOC", "Security Monitoring", "Incident Analysis"],
+    en: [
+      "SOC Platform",
+      "A Security Operations Center (SOC) platform project, built to practise security monitoring and incident analysis workflows.",
+      "Source code and documentation are available in the GitHub repository."
+    ],
+    ar: [
+      "منصة SOC",
+      "مشروع منصة لمركز عمليات الأمن (SOC)، مبني للتدرّب على مراقبة الأمن وتحليل الحوادث.",
+      "الكود والتوثيق متوفران في مستودع GitHub."
+    ]
+  },
+  {
+    id: "XSS", tag: "Web Security", repo: "XSS",
+    tech: ["OWASP", "XSS", "Docker", "Python"],
+    en: [
+      "Cross-Site Scripting (XSS) Lab",
+      "A Dockerized OWASP lab covering reflected and stored XSS, with documented payloads, a Python proof-of-concept script and remediation guidance.",
+      "Includes a README, Payloads.md and Fix.md, written for authorized lab testing."
+    ],
+    ar: [
+      "مختبر Cross-Site Scripting (XSS)",
+      "مختبر OWASP على Docker يغطي XSS المنعكس والمخزّن، مع توثيق للـ payloads وسكربت Python لإثبات المفهوم وإرشادات المعالجة.",
+      "يتضمن README وPayloads.md وFix.md، ومكتوب للاختبار ضمن بيئة مخبرية مصرّح بها."
+    ]
+  },
+  {
+    id: "CSRF", tag: "Web Security", repo: "CSRF",
+    tech: ["OWASP", "CSRF", "Node.js", "Docker"],
+    en: [
+      "Cross-Site Request Forgery (CSRF) Lab",
+      "A hands-on CSRF lab showing how a forged request can abuse an authenticated session, with exploit pages, a Node.js server and documented fixes.",
+      "Forked from nooralshater/CSRF and worked through as a security exercise."
+    ],
+    ar: [
+      "مختبر Cross-Site Request Forgery (CSRF)",
+      "مختبر عملي يوضح كيف يمكن لطلب مزوّر استغلال جلسة مستخدم موثّق، مع صفحات استغلال وخادم Node.js وحلول موثّقة.",
+      "مأخوذ (Fork) من nooralshater/CSRF وتم العمل عليه كتمرين أمني."
+    ]
+  },
+  {
+    id: "XXE", tag: "Web Security", repo: "XXE-XML",
+    tech: ["XXE", "Burp Suite", "Python", "Docker"],
+    en: [
+      "XML External Entity (XXE) Lab",
+      "A lab documenting how an XML endpoint that resolves external entities can expose local files, tested with Burp Suite and fixed by disabling DTD and external entity processing.",
+      "Covers discovery, exploitation, impact and remediation in an authorized lab environment."
+    ],
+    ar: [
+      "مختبر XML External Entity (XXE)",
+      "مختبر يوثّق كيف يمكن لنقطة XML تعالج الكيانات الخارجية أن تكشف ملفات محلية، تم اختباره بـ Burp Suite ومعالجته بتعطيل DTD والكيانات الخارجية.",
+      "يغطي الاكتشاف والاستغلال والأثر والمعالجة ضمن بيئة مخبرية مصرّح بها."
+    ]
+  },
+  {
+    id: "SSTI", tag: "Web Security", repo: "Server-Side-Template-Injection-SSTI-",
+    tech: ["SSTI", "Python", "Docker", "OWASP"],
+    en: [
+      "Server-Side Template Injection (SSTI) Lab",
+      "A lab showing how user input evaluated as template code can lead to local file disclosure and potentially remote code execution, with documented discovery steps and remediation.",
+      "Includes Payloads.md and Fix.md for authorized security testing."
+    ],
+    ar: [
+      "مختبر Server-Side Template Injection (SSTI)",
+      "مختبر يوضح كيف قد يؤدي تنفيذ مدخلات المستخدم كشيفرة قالب إلى كشف ملفات محلية وربما تنفيذ أوامر عن بُعد، مع خطوات الاكتشاف والمعالجة.",
+      "يتضمن Payloads.md وFix.md للاختبار الأمني المصرّح به."
+    ]
+  },
+  {
+    id: "SSRF", tag: "Web Security", repo: "Server-Side-Request-Forgery-SSRF-Local-File-Inclusion-LFI-",
+    tech: ["SSRF", "LFI", "Python", "Docker"],
+    en: [
+      "SSRF & Local File Inclusion (LFI) Lab",
+      "A lab on server-side request forgery and local file inclusion, showing how an unvalidated URL feature can reach local files and internal resources.",
+      "Remediation covers URL validation, blocking dangerous schemes and restricting internal network access."
+    ],
+    ar: [
+      "مختبر SSRF وLocal File Inclusion (LFI)",
+      "مختبر عن تزوير الطلبات من جهة الخادم وتضمين الملفات المحلية، يوضح كيف قد تصل ميزة تقبل رابطاً غير مفحوص إلى ملفات محلية وموارد داخلية.",
+      "تشمل المعالجة فحص الروابط وحظر البروتوكولات الخطرة وتقييد الوصول للشبكة الداخلية."
+    ]
+  },
+  {
+    id: "RCE", tag: "Web Security", repo: "Insecure-Deserialization-Pickle-RCE-",
+    tech: ["Insecure Deserialization", "Python", "Pickle", "RCE"],
+    en: [
+      "Insecure Deserialization (Pickle RCE) Lab",
+      "A lab on insecure deserialization of Python pickle data and how untrusted input can lead to remote code execution.",
+      "Documented for educational purposes and authorized security testing."
+    ],
+    ar: [
+      "مختبر Insecure Deserialization (Pickle RCE)",
+      "مختبر عن إلغاء التسلسل غير الآمن لبيانات Python pickle وكيف قد تؤدي المدخلات غير الموثوقة إلى تنفيذ أوامر عن بُعد.",
+      "موثّق لأغراض تعليمية وللاختبار الأمني المصرّح به."
+    ]
+  },
+  {
+    id: "NET", tag: "Networking", feat: true, repo: "NETWORK",
+    tech: ["Networking", "IP Addressing", "Subnet Mask", "JavaScript"],
+    en: [
+      "NETWORK: Interactive Networking Challenge",
+      "An interactive 20-level web game that teaches how networks are connected together, and how IP addresses and subnet masks decide which devices can talk to each other.",
+      "An IP address identifies a device on a network, and the subnet mask splits it into a network part and a host part, so a device knows whether the destination is local or must go through a router. Connecting networks relies on routers forwarding traffic between different subnets. Each level is a separate page built with HTML, CSS and JavaScript."
+    ],
+    ar: [
+      "NETWORK: تحدٍّ تفاعلي لأساسيات الشبكات",
+      "لعبة ويب تفاعلية من 20 مرحلة تشرح كيف تُربط الشبكات ببعضها، وكيف يحدد عنوان IP وقناع الشبكة (Subnet Mask) أي الأجهزة تستطيع التواصل مع بعضها.",
+      "عنوان IP يعرّف الجهاز داخل الشبكة، وقناع الشبكة يقسمه إلى جزء للشبكة وجزء للجهاز، فيعرف الجهاز إن كانت الوجهة داخل شبكته أو تحتاج المرور عبر راوتر. وربط الشبكات ببعضها يعتمد على الراوترات التي تمرّر البيانات بين الشبكات الفرعية المختلفة. كل مرحلة صفحة مستقلة مبنية بـ HTML وCSS وJavaScript."
+    ]
+  },
+  {
     id: "00", tag: "Shell", repo: "discovery-web-piscine", tech: ["Linux", "Shell", "Git"],
     en: ["Linux & Shell", "Terminal mastery, the file system and shell scripting from the Discovery Piscine."],
     ar: ["لينكس والشِل", "إتقان الطرفية ونظام الملفات والسكربتات."]
@@ -90,9 +202,11 @@ const projects = [
 ];
 
 const skills = [
-  { k: "sk_sec", items: ["Kali Linux", "Nmap", "Wireshark", "Network Security", "TCP/IP", "SOC Fundamentals", "Linux Fundamentals", "TryHackMe"] },
-  { k: "sk_prog", items: ["C++", "Python (Basic)", "SQL"] },
-  { k: "sk_web", items: ["HTML5", "CSS3", "JavaScript", "Git"] }
+  { k: "sk_ws", items: ["Burp Suite", "OWASP Top 10", "XSS", "CSRF", "XXE", "SSTI", "SSRF / LFI", "Insecure Deserialization"] },
+  { k: "sk_net", items: ["Wireshark", "Nmap", "TCP/IP", "Network Security", "SOC Fundamentals"] },
+  { k: "sk_tools", items: ["Kali Linux", "Linux", "Docker", "Git", "TryHackMe", "Hackviser"] },
+  { k: "sk_prog", items: ["Python (Basic)", "C++", "SQL"] },
+  { k: "sk_web", items: ["HTML5", "CSS3", "JavaScript"] }
 ];
 
 const palettes = [
@@ -100,7 +214,7 @@ const palettes = [
   ["#11998e", "#38ef7d"],
   ["#ff512f", "#f09819"],
   ["#f857a6", "#7f5af0"],
-  ["#000000","#f00000fb"]
+  ["#000000", "#f00000fb"]
 ];
 
 const dict = {
@@ -110,10 +224,17 @@ const dict = {
     hero_p: "Cybersecurity graduate with hands-on practice in Kali Linux, Nmap and Wireshark, who also builds clean, responsive websites.",
     roles: ["Cybersecurity Graduate", "SOC & Network Security", "Incident Response Enthusiast", "Kali Linux & Web Dev"],
     cta1: "View Projects", cta2: "Contact Me", casual: "Casual", pro: "Professional",
-    about_p: "I'm a Cybersecurity graduate from Al al-Bayt University, interested in SOC, network security, incident response and cloud security. I practice with Kali Linux, Wireshark, Nmap and TryHackMe labs, and I'm looking for an opportunity to grow inside a professional security team.",
+    about_p: "Cybersecurity graduate from Al al-Bayt University, focused on SOC operations, network security and web application security, with a growing interest in cloud security. I took part in a two-month intensive training at Amman 42, where we built hands-on cybersecurity projects. On GitHub I document security labs covering XSS, CSRF, XXE, SSTI, SSRF/LFI and insecure deserialization, explaining how each vulnerability works and how to fix it, alongside a SOC platform and a networking challenge. I train with Kali Linux, Burp Suite, Wireshark, Nmap and TryHackMe, and I'm looking for an opportunity to grow inside a professional security team.",
     st1: "Projects", st2: "Certificates", st3: "GitHub Repos", st4: "Followers",
     j_title: "My Journey", j0: "BSc in Cybersecurity, Al al-Bayt University.",
-    sk_sec: "Cybersecurity", sk_prog: "Programming", sk_web: "Web", cv: "Download CV",
+    sk_ws: "Web Application Security", sk_net: "Network & SOC", sk_tools: "Tools & Platforms", sk_prog: "Programming", sk_web: "Web Development",
+    fact4: "🏫 Amman 42 · Intensive training",
+    tt0: "Al al-Bayt University", td0: "BSc in Cybersecurity, building the foundations of network and information security.",
+    tt1: "Amman 42 · Linux & Git", td1: "Two-month intensive training: command line, shell and version control with clean commits and branches.",
+    tt2: "Amman 42 · Web & Cyber Projects", td2: "Semantic HTML, responsive CSS and DOM-driven JavaScript, alongside hands-on cybersecurity projects.",
+    tt3: "Security Labs on GitHub", td3: "XSS, CSRF, XXE, SSTI, SSRF/LFI and insecure deserialization labs, plus a SOC platform and a networking challenge.",
+    tt4: "Certifications", td4: "Hackviser CORE and CAPT, Cisco Cybersecurity Essentials, Cisco Python Essentials 1 and Ethical Hacking with Kali.",
+    tt5: "Next: SOC & Security Roles", td5: "Looking to join a professional security team and grow in monitoring, incident response and threat analysis.", cv: "Download CV",
     fact1: "🎓 Cybersecurity graduate · Al al-Bayt University", fact2: "🌐 Arabic (Native) · English (Good)", fact3: "📍 Amman, Jordan",
     visit: "Visit website →", verify: "Verify certificate →", grad: "Featured Project", result: "Details", j1: "Terminal, shell and file system.",
     j2: "Version control and clean commits.", j3: "Semantic pages and responsive design.", j4: "DOM, events and interactivity.",
@@ -129,10 +250,17 @@ const dict = {
     hero_p: "خريج أمن سيبراني بخبرة عملية في Kali Linux وNmap وWireshark، وأبني أيضاً مواقع نظيفة ومتجاوبة.",
     roles: ["خريج أمن سيبراني", "SOC وأمن الشبكات", "شغوف بالاستجابة للحوادث", "Kali Linux وتطوير الويب"],
     cta1: "شاهد المشاريع", cta2: "تواصل معي", casual: "عادية", pro: "رسمية",
-    about_p: "أنا خريج أمن سيبراني من جامعة آل البيت، مهتم بالـ SOC وأمن الشبكات والاستجابة للحوادث وأمن السحابة. أتدرّب باستخدام Kali Linux وWireshark وNmap ومختبرات TryHackMe، وأبحث عن فرصة للتطور ضمن فريق أمني محترف.",
+    about_p: "خريج أمن سيبراني من جامعة آل البيت، أركّز على عمليات الـ SOC وأمن الشبكات وأمن تطبيقات الويب، مع اهتمام متزايد بأمن السحابة. شاركت وتدرّبت في Amman 42 ضمن تدريب مكثف لمدة شهرين، نفّذنا خلاله مشاريع عملية في الأمن السيبراني. وعلى GitHub أوثّق مختبرات أمنية تغطي XSS وCSRF وXXE وSSTI وSSRF/LFI وInsecure Deserialization، مع شرح كيف تعمل كل ثغرة وكيف تُعالَج، إضافة إلى منصة SOC وتحدٍّ في الشبكات. أتدرّب باستخدام Kali Linux وBurp Suite وWireshark وNmap وTryHackMe، وأبحث عن فرصة للتطور ضمن فريق أمني محترف.",
     st1: "مشاريع", st2: "شهادات", st3: "مستودعات GitHub", st4: "متابعون",
     j_title: "رحلتي", j0: "بكالوريوس أمن سيبراني — جامعة آل البيت.",
-    sk_sec: "الأمن السيبراني", sk_prog: "البرمجة", sk_web: "الويب", cv: "تحميل السيرة الذاتية",
+    sk_ws: "أمن تطبيقات الويب", sk_net: "الشبكات وSOC", sk_tools: "الأدوات والمنصات", sk_prog: "البرمجة", sk_web: "تطوير الويب",
+    fact4: "🏫 Amman 42 · تدريب مكثف",
+    tt0: "جامعة آل البيت", td0: "بكالوريوس في الأمن السيبراني، وبناء الأساس في أمن الشبكات والمعلومات.",
+    tt1: "Amman 42 · لينكس وGit", td1: "تدريب مكثف لمدة شهرين: سطر الأوامر والشِل والتحكم بالإصدارات مع كوميتات وفروع منظمة.",
+    tt2: "Amman 42 · مشاريع الويب والسايبر", td2: "HTML دلالي وCSS متجاوب وJavaScript تفاعلية مع DOM، إلى جانب مشاريع عملية في الأمن السيبراني.",
+    tt3: "مختبرات أمنية على GitHub", td3: "مختبرات XSS وCSRF وXXE وSSTI وSSRF/LFI وInsecure Deserialization، إضافة إلى منصة SOC وتحدٍّ في الشبكات.",
+    tt4: "الشهادات", td4: "Hackviser CORE وCAPT وCisco Cybersecurity Essentials وCisco Python Essentials 1 وEthical Hacking with Kali.",
+    tt5: "الهدف: وظائف SOC والأمن", td5: "أسعى للانضمام إلى فريق أمني محترف والتطور في المراقبة والاستجابة للحوادث وتحليل التهديدات.", cv: "تحميل السيرة الذاتية",
     fact1: "🎓 خريج أمن سيبراني · جامعة آل البيت", fact2: "🌐 العربية (لغة أم) · الإنجليزية (جيد)", fact3: "📍 عمّان، الأردن",
     visit: "زيارة الموقع ←", verify: "تحقق من الشهادة ←", grad: "مشروع مميز", result: "التفاصيل", j1: "الطرفية والشِل ونظام الملفات.",
     j2: "التحكم بالإصدارات وكوميتات مرتبة.", j3: "صفحات دلالية وتصميم متجاوب.", j4: "DOM والأحداث والتفاعلية.",
@@ -144,7 +272,7 @@ const dict = {
   }
 };
 
-/* -----------------------------------helpers  */
+/* ================= helpers ================= */
 const $ = (selector, rootElement = document) => rootElement.querySelector(selector);
 const $$ = (selector, rootElement = document) => [...rootElement.querySelectorAll(selector)];
 const root = document.documentElement;
@@ -155,7 +283,7 @@ const store = {
 let lang = store.get("lang") === "ar" ? "ar" : "en";
 let photo = "casual";
 
-/* -----------------------------rendering */
+/* ================= rendering ================= */
 function renderSkills() {
   const grid = $("#skillGrid");
   grid.innerHTML = skills.map(group => `
@@ -191,7 +319,7 @@ function renderCerts() {
   `).join("");
 }
 
-/* ---------------------------language switcher */
+/* ================= language switcher ================= */
 function setLang(nextLanguage) {
   lang = nextLanguage === "ar" ? "ar" : "en";
   root.lang = lang;
@@ -214,7 +342,7 @@ function setLang(nextLanguage) {
 }
 $("#langBtn").addEventListener("click", () => setLang(lang === "en" ? "ar" : "en"));
 
-/* --------------------------- theme + accent switcher */
+/* ================= theme + accent switcher ================= */
 let particleColor = "#00d2ff";
 function readColor() {
   particleColor = getComputedStyle(root).getPropertyValue("--a2").trim() || particleColor;
@@ -241,7 +369,7 @@ $("#dots").addEventListener("click", event => {
   if (dot) setAccent(Number(dot.dataset.i));
 });
 
-/* --------------photo switcher------------------ */
+/* ================= photo switcher ================= */
 const avatar = $("#avatar");
 const FALLBACK = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#6c5ce7"/><text x="100" y="128" font-size="90" text-anchor="middle" fill="#fff" font-family="sans-serif">H</text></svg>'
@@ -264,7 +392,7 @@ $$(".avatar-btns .chip").forEach(button => button.addEventListener("click", () =
   }, 250);
 }));
 
-/*  modal + project/certificate clicks */
+/* ================= modal + project/certificate clicks ================= */
 function openModal(title, description, tags, href, linkLabel, result, image) {
   $("#mT").textContent = title;
   $("#mD").textContent = description;
@@ -273,7 +401,7 @@ function openModal(title, description, tags, href, linkLabel, result, image) {
   resultElement.hidden = !result;
   resultElement.textContent = result || "";
 
-  /* certificate picture  */
+  /* certificate picture (safe: the modal still opens even if #mImg is missing from index.html) */
   const imageElement = $("#mImg");
   if (imageElement) {
     imageElement.hidden = !image;
@@ -548,3 +676,144 @@ setAccent(Number.isInteger(savedAccent) && savedAccent >= 0 && savedAccent < pal
 setLang(lang);
 showPhoto("casual");
 typeRole();
+
+/* ================= advanced features (terminal, lab steps, badges) ================= */
+/* Advanced features. Loads AFTER script.js and is wrapped in an IIFE, so it can't clash with your variables. */
+(() => {
+  const FORMSPREE = "";      // paste "https://formspree.io/f/XXXX" to send real emails (empty = keep mailto)
+  const OPEN_TO_WORK = true;
+  const writeups = [];       // { en:"Title", ar:"عنوان", url:"https://...", tag:"TryHackMe" }; the section hides when empty
+
+  const T = {
+    en: { otw: "Open to SOC & Junior Security roles", term: "Terminal", ws: "Write-ups", skip: "Skip to content", verified: "Verified",
+      lab: "🧪 Lab Environment", hello: "Welcome. Type 'help' to see the commands.", nf: "command not found",
+      help: "Commands: help, whoami, skills, projects, certs, contact, cv, theme, lang, clear",
+      who: `${NAME} · Cybersecurity graduate · SOC, network and web security`,
+      sent: "Message sent ✅", fail: "Could not send. Please try again or email me directly.", steps: ["Attack", "Impact", "Fix"] },
+    ar: { otw: "متاح لوظائف SOC والأمن المبتدئة", term: "الطرفية", ws: "كتابات تقنية", skip: "تخطَّ إلى المحتوى", verified: "موثّقة",
+      lab: "🧪 بيئة مخبرية", hello: "أهلاً. اكتب 'help' لعرض الأوامر.", nf: "الأمر غير موجود",
+      help: "الأوامر: help, whoami, skills, projects, certs, contact, cv, theme, lang, clear",
+      who: `${NAME} · خريج أمن سيبراني · SOC وأمن الشبكات والويب`,
+      sent: "تم إرسال الرسالة ✅", fail: "تعذّر الإرسال. حاول مجدداً أو راسلني مباشرة.", steps: ["الهجوم", "الأثر", "المعالجة"] }
+  };
+  const L = () => T[lang];
+
+  /* concept-level summaries for each lab: [attack, impact, fix] */
+  const labs = {
+    XSS: { o: "OWASP A03:2021 Injection",
+      en: ["Untrusted input is reflected or stored, then rendered as HTML or JavaScript.", "Session theft, account takeover, defacement and malicious redirects.", "Context-aware output encoding, input validation, a strict CSP and HttpOnly cookies."],
+      ar: ["مدخلات غير موثوقة تُعرض أو تُخزَّن ثم تُنفَّذ كـ HTML أو JavaScript.", "سرقة الجلسات والاستيلاء على الحسابات وتشويه الصفحات والتحويل لمواقع خبيثة.", "ترميز المخرجات حسب السياق، وفحص المدخلات، وسياسة CSP صارمة، وكوكيز HttpOnly."] },
+    CSRF: { o: "",
+      en: ["A forged request from another site rides on the victim's authenticated session.", "Unwanted actions performed in the user's name, such as changing data or settings.", "Anti-CSRF tokens, SameSite cookies and re-authentication for sensitive actions."],
+      ar: ["طلب مزوّر من موقع آخر يستغل جلسة الضحية الموثّقة.", "تنفيذ إجراءات غير مرغوبة باسم المستخدم مثل تغيير بياناته أو إعداداته.", "رموز Anti-CSRF وكوكيز SameSite وإعادة المصادقة للإجراءات الحساسة."] },
+    XXE: { o: "OWASP A05:2021 Security Misconfiguration",
+      en: ["An XML parser resolves external entities defined in attacker-controlled input.", "Local file disclosure, internal network access and denial of service.", "Disable DTDs and external entities in the parser, and prefer simpler data formats."],
+      ar: ["محلل XML يعالج كيانات خارجية معرّفة في مدخلات يتحكم بها المهاجم.", "كشف ملفات محلية والوصول للشبكة الداخلية وحجب الخدمة.", "تعطيل DTD والكيانات الخارجية في المحلل، وتفضيل صيغ بيانات أبسط."] },
+    SSTI: { o: "OWASP A03:2021 Injection",
+      en: ["User input is concatenated into a template and evaluated by the template engine.", "Data disclosure and, in many engines, remote code execution on the server.", "Never build templates from user input; pass data as variables and use sandboxed rendering."],
+      ar: ["مدخلات المستخدم تُدمج في قالب وتُنفَّذ بواسطة محرك القوالب.", "كشف بيانات، وفي كثير من المحركات تنفيذ أوامر عن بُعد على الخادم.", "عدم بناء القوالب من مدخلات المستخدم، وتمرير البيانات كمتغيرات واستخدام عرض معزول."] },
+    SSRF: { o: "OWASP A10:2021 SSRF",
+      en: ["The server fetches a user-supplied URL without validating where it points.", "Access to local files, internal services and cloud metadata endpoints.", "Allow-list destinations, block dangerous schemes and private IP ranges, isolate the fetcher."],
+      ar: ["الخادم يجلب رابطاً يقدمه المستخدم دون التحقق من وجهته.", "الوصول لملفات محلية وخدمات داخلية ونقاط بيانات السحابة.", "قائمة سماح للوجهات، وحظر البروتوكولات الخطرة والعناوين الخاصة، وعزل الجالب."] },
+    RCE: { o: "OWASP A08:2021 Software and Data Integrity Failures",
+      en: ["Untrusted data is deserialized with a format that can instantiate arbitrary objects.", "Remote code execution with the privileges of the application.", "Never unpickle untrusted data; use safe formats such as JSON and verify integrity with signatures."],
+      ar: ["بيانات غير موثوقة تُفكّ تسلسلها بصيغة تسمح بإنشاء كائنات عشوائية.", "تنفيذ أوامر عن بُعد بصلاحيات التطبيق.", "عدم استخدام pickle مع بيانات غير موثوقة، واستخدام صيغ آمنة مثل JSON والتحقق بالتوقيعات."] }
+  };
+
+  /* ---------- small injections ---------- */
+  document.body.insertAdjacentHTML("afterbegin", '<a class="skip" href="#about" data-tx="skip"></a>');
+  if (OPEN_TO_WORK) $(".hero-text")?.insertAdjacentHTML("afterbegin", '<span class="otw"><i></i><span data-tx="otw"></span></span>');
+
+
+  /* ---------- Attack -> Impact -> Fix inside the project modal ---------- */
+  document.addEventListener("click", e => {
+    const card = e.target.closest("[data-p], [data-c]");
+    if (!card) return;
+    $$(".steps").forEach(x => x.remove());
+    const lab = labs[card.dataset.p];
+    if (!lab) return;
+    const box = document.createElement("div");
+    box.className = "steps";
+    box.innerHTML = L().steps.map((name, i) => `<div class="st"><b>${name}</b><p>${lab[lang][i]}</p></div>`).join("");
+    $("#mR").after(box);
+    const badges = (lab.o ? `<span class="lab-badge">${lab.o}</span>` : "") + `<span class="lab-badge">${L().lab}</span>`;
+    $("#mTags").insertAdjacentHTML("beforeend", badges);
+  });
+
+  /* ---------- "Verified" badge on certificates that have a verification link ---------- */
+  const markVerified = () => $$("#certGrid .card").forEach(c => {
+    if (certs[Number(c.dataset.c)]?.link && !c.querySelector(".ver")) c.insertAdjacentHTML("afterbegin", `<small class="ver">✔ ${L().verified}</small>`);
+  });
+  new MutationObserver(markVerified).observe($("#certGrid"), { childList: true });
+  markVerified();
+
+  /* ---------- write-ups (only if you fill the array above) ---------- */
+  const mk = (id, html) => { const s = document.createElement("section"); s.id = id; s.innerHTML = html; return s; };
+  const renderWs = () => {
+    const g = $("#wsGrid");
+    if (g) g.innerHTML = writeups.map(w => `<a class="card" href="${w.url}" target="_blank" rel="noopener noreferrer"><small class="star">${w.tag || ""}</small><h3>${w[lang] || w.en}</h3><span class="link">↗</span></a>`).join("");
+  };
+  if (writeups.length) $("#hobbies").after(mk("writeups", '<h2 class="title" data-tx="ws"></h2><div class="grid" id="wsGrid"></div>'));
+
+  /* ---------- interactive terminal ---------- */
+  $("#contact").before(mk("terminal", `<h2 class="title" data-tx="term"></h2>
+    <div class="term" id="term"><div class="term-bar"><i></i><i></i><i></i><span>guest@portfolio:~</span></div>
+    <div class="term-out" id="tout" aria-live="polite"></div>
+    <label class="term-in"><span>$</span><input id="tin" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal input"></label></div>`));
+  const out = $("#tout"), inp = $("#tin"), hist = [];
+  let hi = 0;
+  const print = (text, cls = "") => {
+    const d = document.createElement("div");
+    d.className = cls;
+    d.textContent = text;                       // textContent only: user input is never parsed as HTML
+    out.append(d);
+    out.scrollTop = out.scrollHeight;
+  };
+  const cmds = {
+    help: () => [L().help],
+    whoami: () => [L().who],
+    skills: () => skills.map(g => `${dict[lang][g.k]}: ${g.items.join(", ")}`),
+    projects: () => projects.map(p => `[${p.id}] ${p[lang][0]}`),
+    certs: () => certs.map(c => `✔ ${c[lang][0]} (${c.tag})`),
+    contact: () => ["hasheemalghanem@gmail.com", "+962 77 218 5488"],
+    cv: () => { const a = document.createElement("a"); a.href = "assets/Hashem_Al-Na_seh_CV.docx"; a.download = ""; a.click(); return ["downloading CV..."]; },
+    theme: () => { $("#themeBtn").click(); return ["theme switched"]; },
+    lang: () => { $("#langBtn").click(); return ["language switched"]; },
+    clear: () => { out.textContent = ""; return []; },
+    sudo: () => ["Nice try 😄 permission denied."]
+  };
+  inp.addEventListener("keydown", e => {
+    if (e.key === "ArrowUp") { hi = Math.max(0, hi - 1); inp.value = hist[hi] || ""; e.preventDefault(); return; }
+    if (e.key === "ArrowDown") { hi = Math.min(hist.length, hi + 1); inp.value = hist[hi] || ""; e.preventDefault(); return; }
+    if (e.key !== "Enter") return;
+    const raw = inp.value.trim();
+    inp.value = "";
+    if (!raw) return;
+    hist.push(raw); hi = hist.length;
+    print(`$ ${raw}`, "cmd");
+    const name = raw.toLowerCase().split(/\s+/)[0];
+    (Object.hasOwn(cmds, name) ? cmds[name]() : [`${L().nf}: ${name}`]).forEach(line => print(line));
+  });
+  $("#term").addEventListener("click", () => inp.focus());
+  print(L().hello, "dim");
+
+  /* ---------- optional: real contact form through Formspree ---------- */
+  if (FORMSPREE) document.addEventListener("submit", async e => {
+    if (e.target.id !== "form") return;
+    e.preventDefault();
+    e.stopImmediatePropagation();               // replaces the mailto handler
+    const data = { name: $("#name").value.trim(), email: $("#email").value.trim(), message: $("#msg").value.trim() };
+    const status = $("#status");
+    if (!data.name || !data.message || !/^\S+@\S+\.\S+$/.test(data.email)) { status.textContent = dict[lang].err; status.style.color = "#ff6b6b"; return; }
+    try {
+      const r = await fetch(FORMSPREE, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) });
+      if (!r.ok) throw new Error(r.status);
+      status.textContent = L().sent; status.style.color = "#2ecc71"; e.target.reset();
+    } catch { status.textContent = L().fail; status.style.color = "#ff6b6b"; }
+  }, true);
+
+  /* ---------- keep injected texts in sync with the language switcher ---------- */
+  const refresh = () => { $$("[data-tx]").forEach(el => { el.textContent = L()[el.dataset.tx]; }); renderWs(); };
+  new MutationObserver(refresh).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+  refresh();
+})();
